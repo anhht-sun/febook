@@ -11,20 +11,20 @@
 		<put-attribute name="footer" value="/views/layout/footer.jsp" />
 	</definition>
 
-	<!-- List Students -->
+	<!-- List Users -->
 	<definition name="home" extends="baseLayout">
 		<put-attribute name="title" value="HOME" />
-		<put-attribute name="body" value="/views/students/listSt.jsp" />
+		<put-attribute name="body" value="/views/users/listSt.jsp" />
 	</definition>
 	
 	<definition name="student" extends="baseLayout">
 		<put-attribute name="title" value="HOME" />
-		<put-attribute name="body" value="/views/students/student.jsp" />
+		<put-attribute name="body" value="/views/users/user.jsp" />
 	</definition>
 	
-	<definition name="studentform" extends="baseLayout">
+	<definition name="userform" extends="baseLayout">
 		<put-attribute name="title" value="HOME" />
-		<put-attribute name="body" value="/views/students/studentform.jsp" />
+		<put-attribute name="body" value="/views/users/userform.jsp" />
 	</definition>
 
 </tiles-definitions>

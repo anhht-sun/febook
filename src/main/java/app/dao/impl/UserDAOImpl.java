@@ -2,6 +2,7 @@ package app.dao.impl;
 
 import java.util.List;
 
+
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
@@ -14,25 +15,25 @@ import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
 
 import app.dao.GenericDAO;
-import app.dao.StudentDAO;
-import app.model.Student;
+import app.dao.UserDAO;
+import app.model.User;
 
-public class StudentDAOImpl extends GenericDAO<Integer, Student> implements StudentDAO {
-	private static final Logger logger = Logger.getLogger(StudentDAOImpl.class);
+public class UserDAOImpl extends GenericDAO<Integer, User> implements UserDAO {
+	private static final Logger logger = Logger.getLogger(UserDAOImpl.class);
 
-	public StudentDAOImpl() {
-		super(Student.class);
+	public UserDAOImpl() {
+		super(User.class);
 	}
 
-	public StudentDAOImpl(SessionFactory sessionfactory) {
+	public UserDAOImpl(SessionFactory sessionfactory) {
 		setSessionFactory(sessionfactory);
 	}	
 
 	@Override
-	public List<Student> search(String query) {
+	public List<User> search(String query) {
 		CriteriaBuilder builder = getSession().getCriteriaBuilder();
-		CriteriaQuery<Student> cr = builder.createQuery(Student.class);
-		Root<Student> root = cr.from(Student.class);
+		CriteriaQuery<User> cr = builder.createQuery(User.class);
+		Root<User> root = cr.from(User.class);
 		cr.select(root);
 
 		Predicate search = builder.or(builder.like(root.get("name"), "%" + query + "%"), builder.like(root.get("email"), "%" + query + "%"));
@@ -43,8 +44,8 @@ public class StudentDAOImpl extends GenericDAO<Integer, Student> implements Stud
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Student> loadStudents() {
-		return getSession().createQuery("from Student").getResultList();
+	public List<User> loadUsers() {
+		return getSession().createQuery("from User").getResultList();
 	}
 
 }

@@ -1,15 +1,15 @@
 package app.service.impl;
 
-import app.dao.StudentDAO;
+import app.dao.UserDAO;
 
 public class BaseServiceImpl {
-	protected StudentDAO studentDAO;
+	protected UserDAO userDAO;
 
-	public StudentDAO getStudentDAO() {
-		return studentDAO;
+	public UserDAO getUserDAO() {
+		return userDAO;
 	}
 
-	public void setStudentDAO(StudentDAO studentDAO) {
-		this.studentDAO = studentDAO;
+	public void setUserDAO(UserDAO userDAO) {
+		this.userDAO = userDAO;
 	}
 }

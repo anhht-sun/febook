@@ -16,7 +16,7 @@
 				<c:if test="${empty msg}">
 					<div class="panel panel-info">
 						<div class="panel-heading">
-							<h3 class="panel-title">Profile Student</h3>
+							<h3 class="panel-title">Profile User</h3>
 						</div>
 						<div class="panel-body">
 							<div class="row">
@@ -30,18 +30,18 @@
 										<tbody>
 											<tr>
 												<td>Name</td>
-												<td>${student.name}</td>
+												<td>${user.name}</td>
 											</tr>
 											<tr>
 												<td>Email</td>
-												<td>${student.email}</td>
+												<td>${user.email}</td>
 											</tr>
 											<tr>
 												<td>Gender</td>
 												<td>
-													<c:if test="${student.gender == 1}">Fmale</c:if>
-													<c:if test="${student.gender == 0}">Male</c:if>
-													<c:if test="${student.gender != 0 && student.gender != 1}">N/A</c:if>
+													<c:if test="${user.gender == 1}">Fmale</c:if>
+													<c:if test="${user.gender == 0}">Male</c:if>
+													<c:if test="${user.gender != 0 && user.gender != 1}">N/A</c:if>
 												</td>
 											</tr>
 										</tbody>

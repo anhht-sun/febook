@@ -1,21 +1,21 @@
 package app.bean;
 
-public class StudentInfo {
+public class UserInfo {
 
-	public StudentInfo(Integer id, String name, String email, int gender) {
+	public UserInfo(Integer id, String name, String email, int gender) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.gender = gender;
 	}
 
-	public StudentInfo(String name, String email, int gender) {
+	public UserInfo(String name, String email, int gender) {
 		this.name = name;
 		this.email = email;
 		this.gender = gender;
 	}
 
-	public StudentInfo() {
+	public UserInfo() {
 	}
 
 	private Integer id;
