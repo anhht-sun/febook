@@ -16,9 +16,9 @@
 	</c:choose>
 	<br />
 	<div class="col-md-6"  style="margin: 0 auto;">
-		<spring:url value="/student" var="userActionUrl" />
+		<spring:url value="/user" var="userActionUrl" />
 		<form:form class="form-horizontal" method="post" 
-			modelAttribute="studentForm" action="${userActionUrl}">
+			modelAttribute="userForm" action="${userActionUrl}">
 			<form:hidden path="id" />
 			<div class="form-group">
 				<label class="col-sm-2 control-label">Name</label>

@@ -1,21 +1,21 @@
 package app.model;
 
-public class Student {
+public class User {
 	private Integer id;
 	private String name;
 	private String email;
 	private int gender;
 
-	public Student() {
+	public User() {
 	}
 
-	public Student(String name, String email, int gender) {
+	public User(String name, String email, int gender) {
 		this.name = name;
 		this.email = email;
 		this.gender = gender;
 	}
 
-	public Student(int id, String name, String email, int gender) {
+	public User(int id, String name, String email, int gender) {
 		super();
 		this.id = id;
 		this.name = name;
