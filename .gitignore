@@ -34,7 +34,7 @@ buildSrc/build
 /src/asciidoc/build
 target/
 /src/main/resources/datasources.properties
-
+src/main/resources/datasources.properties
 # Eclipse artifacts, including WTP generated manifests
 .classpath
 .project
