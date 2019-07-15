@@ -29,7 +29,7 @@ public class UserController {
 	@RequestMapping(value = "/")
 	public ModelAndView index() {
 		logger.info("home page");
-		ModelAndView model = new ModelAndView("home");
+		ModelAndView model = new ModelAndView("layout");
 		model.addObject("user", new User());
 		model.addObject("users", userService.loadUsers());
 		return model;
